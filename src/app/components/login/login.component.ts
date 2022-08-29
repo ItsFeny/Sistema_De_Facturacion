@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   form2: FormGroup;
 
-  constructor(private fb: FormBuilder, private _httpConfig: HttpConfigServiceService, private router: Router) 
+  constructor(private fb: FormBuilder, 
+              private _httpConfig: HttpConfigServiceService, 
+              private router: Router) 
   {
     this.form = this.fb.group({
       name:[''],
@@ -48,6 +51,7 @@ export class LoginComponent implements OnInit {
 
       
         this._httpConfig.SaveRegister(user).subscribe(data => {
+
         console.log("se agrego");
 
         //resetea los campos 

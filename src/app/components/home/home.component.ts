@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import jwtDecode from 'jwt-decode';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +11,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-
-   token: any = sessionStorage.getItem('token');
-   decoded:any = jwtDecode(this.token)! ; 
-   
-   
-   
+  token: any = sessionStorage.getItem('token');
+  decoded:any = jwtDecode(this.token)! ; 
+  
 
 
   constructor() { }
@@ -24,7 +21,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void 
   {
-    
+    console.log(this.token)
   }
 
 
@@ -32,6 +29,3 @@ export class HomeComponent implements OnInit {
 
 }
 
-function jwtDecode(token: any): any {
-  throw new Error('Function not implemented.');
-}
