@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding-bottom: 14.5%;
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}  
+
+
+.container 
+{
+    display: flex;
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+
+/*Header configuracion*/
+
+.header 
+{
+    width: 500px;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.header h1
+{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-family: "Courier New";
+    color: aliceblue;
+    border-right: 0.15em solid #18bdec;
+    animation: typing 2s steps(10) 2s 1 normal both, blink 1s steps(1) infinite;
+}
+
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+
+
+  /*Icono de salir*/
+  .leave 
+  {
+     width: 3%;
+     height: 3%;
+     margin-left: 95%;
+     margin-top: 20px;
+     cursor: pointer;
+  }
