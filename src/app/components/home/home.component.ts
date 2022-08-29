@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import jwtDecode from 'jwt-decode';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,10 @@ export class HomeComponent implements OnInit {
   
 
 
-  constructor() { }
+  constructor(private titulo: Title) 
+  {
+     titulo.setTitle('Inicio');
+  }
 
   
   ngOnInit(): void 

@@ -2,7 +2,7 @@ import { HttpConfigServiceService } from 'src/app/Services/http-config-service.s
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder, 
               private _httpConfig: HttpConfigServiceService, 
-              private router: Router) 
+              private router: Router,
+              private titulo: Title) 
   {
     this.form = this.fb.group({
       name:[''],
@@ -28,6 +29,9 @@ export class LoginComponent implements OnInit {
       usuario:[''],
       contraseña:['']
     });
+
+    //Configuracion de titulo
+    titulo.setTitle('Login');
 
   }
 
