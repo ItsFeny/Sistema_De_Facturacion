@@ -7,7 +7,8 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class HttpConfigServiceService {
 
- 
+  //LOGIN Y REGISTRO
+
   //url del Swager
   private AppUrl = 'https://localhost:7017/';
 
@@ -18,13 +19,33 @@ export class HttpConfigServiceService {
   private ApiUrlLogin = 'api/Auth/login';
 
 
+
+
+
+
+   //CLIENTES
+   private ApiUrlClient = 'api/Client/';
+
+
+
+
+
+
+
   constructor(private http: HttpClient)
   {
 
   }
 
 
-  
+ 
+
+
+
+
+//LOGIN Y REGISTRO
+
+
 SaveRegister(user: any): Observable<any>
 {
   return this.http.post(this.AppUrl + this.ApiUrlRegister,user)
@@ -35,6 +56,41 @@ SaveRegister(user: any): Observable<any>
 Login(users: any): Observable<any>
 {
   return this.http.post(this.AppUrl + this.ApiUrlLogin,users)
+}
+
+
+
+
+
+
+
+//CLIENTE
+
+//Metodo para obtener los datos de la api
+GetListClient(): Observable<any>
+{
+  return this.http.get(this.AppUrl + this.ApiUrlClient);
+}
+
+
+//Metodo para guardar los datos 
+SaveClient(Client: any): Observable<any>
+{
+   return this.http.post(this.AppUrl + this.ApiUrlClient,Client)
+}
+
+
+//Metodo para actualizar los datos
+UpdateClient(id: number, Client: any): Observable <any>
+{
+  return this.http.put(this.AppUrl + this.ApiUrlClient + id,Client)
+}
+
+
+//Metodo para eliminar 
+DeleteClient(id: number): Observable<any>
+{
+   return this.http.delete(this.AppUrl + this.ApiUrlClient + id)
 }
 
 

@@ -1,0 +1,38 @@
+
+body 
+{
+    margin: 0;
+    padding: 6.3%;
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+/* Cambio de cursor de los iconos en la lista de tarjetas */
+.icon-edit-elim
+{
+    cursor: pointer;
+}
+
+
+/* Color de la validaciones */
+.green-color-icon
+{
+    color: mediumseagreen;
+}
+
+.red-color-icon
+{
+    color: brown;
+}
+
+
+/*Configuracion icono back*/
+.back
+{
+    width: 3%;
+    height: 3%;
+    margin-left: 94%;
+    
+    cursor: pointer;
+}

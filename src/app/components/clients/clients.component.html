@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    
+
+    <img src="../../../assets/img/Back.png" class="back" [routerLink]="['/Home']" title="Volver">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8-offset-lg-2">
+               <div class="card bg-info">
+                   <div class="card-body text-center">
+                        <h2 style="font-size: 40px; font-weight: 700;">Consultar Clientes</h2>
+                   </div>
+               </div>
+            </div>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                 <div class="card">
+                     <div class="card-body text-center">
+                         <h4>{{ ChangeName | titlecase }} Cliente</h4>
+    
+                         <form [formGroup]="forms" (ngSubmit)="AddClient()">
+                           
+                           
+                            <div class="input-group input-group-lg mt-4 mb-3">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-user-tie" [class.green-color-icon]="this.forms.get('Name')?.valid" 
+                                                                    [class.red-color-icon]="this.forms.get('Name')?.invalid && this.forms.get('Name')?.touched">
+                                    </i>
+                                </span>
+                                <input formControlName="Name" type="text" class="form-control" placeholder="Nombre" maxlength="20">
+                              </div>
+
+
+                              <div class="input-group input-group-lg mt-4 mb-3">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-credit-card" [class.green-color-icon]="this.forms.get('Cedula')?.valid"
+                                                                       [class.red-color-icon]="this.forms.get('Cedula')?.invalid && this.forms.get('Cedula')?.touched"
+                                                                       >
+    
+                                    </i>
+                                </span>
+                                <input formControlName="Cedula" type="text" class="form-control" placeholder="Cedula" maxlength="13">
+                              </div>
+
+
+
+                              <div class="input-group input-group-lg mt-4 mb-3">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-mobile-screen" [class.green-color-icon]="this.forms.get('Telefono')?.valid"
+                                                                         [class.red-color-icon]="this.forms.get('Telefono')?.invalid && this.forms.get('Telefono')?.touched"
+                                                                       >
+    
+                                    </i>
+                                </span>
+                                <input formControlName="Telefono" type="text" class="form-control" placeholder="Telefono" maxlength="12">
+                              </div>
+    
+
+                              <div class="d-grid gap-2">
+                                <button [disabled]="this.forms.invalid" type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                              </div>
+                    
+                               
+    
+                         </form>
+    
+                     </div>
+                 </div> 
+            </div>
+
+
+
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4>Lista De Clientes</h4>
+                        <table class="table mt-4">
+                            <tbody>
+                                <tr *ngFor="let client of listClient">
+                                    <td> {{ client.id }} </td>
+                                    <td> {{ client.name }} </td>
+                                    <td> {{ client.cedula}}  </td>
+                                    <td> {{ client.telefono }} </td>
+                                    <td class="icon-edit-elim">
+                                        <i (click)="EditClient(client)" class="fa-solid fa-file-pen text-info" title="Editar"></i>
+                                    </td>
+                                    <td (click)="DeleteClient(client.id)" class="icon-edit-elim" title="Eliminar">
+                                        <i class="fa-solid fa-trash text-danger"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div> 
+    
+
+</body>
+</html>

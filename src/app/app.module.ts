@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ClientsComponent } from './components/clients/clients.component';
 
 
 
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

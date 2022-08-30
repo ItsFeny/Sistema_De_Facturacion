@@ -6,6 +6,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a 
+{
+  text-decoration: none;
+}
+
 body
 {
     margin: 0;
@@ -24,6 +29,9 @@ body
 }
 
 
+
+
+
 /*Header configuracion*/
 
 .header 
@@ -32,7 +40,6 @@ body
     padding: 50px;
     margin: auto;
     text-align: center;
-    
 }
 
 .header h1
@@ -42,9 +49,10 @@ body
     white-space: nowrap;
     margin: 0 auto;
     font-family: "Courier New";
+    font-weight: 700;
     color: aliceblue;
     border-right: 0.15em solid #18bdec;
-    animation: typing 2s steps(10) 2s 1 normal both, blink 1s steps(1) infinite;
+    animation: typing 2s steps(10) 0.5s 1 normal both, blink 1s steps(1) infinite;
 }
 
 
