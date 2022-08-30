@@ -7,15 +7,15 @@
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form [formGroup]="form" (ngSubmit)="Register()">
-					<label for="chk" aria-hidden="true">Registro</label>
-					<input formControlName="name" class="form-control" type="text" name="txt" placeholder="Nombre" required="">
-					<input formControlName="Correo" class="form-control" type="email" name="email" placeholder="Correo" required="">
-					<input formControlName="password" class="form-control" type="password" name="pswd" placeholder="Contraseña" required="">
-					<button>Crear</button>
-				</form>
-			</div>
+		<div class="signup">
+			<form [formGroup]="form" (ngSubmit)="Register()">
+				<label for="chk" aria-hidden="true">Registro</label>
+				<input formControlName="name" class="form-control" type="text" name="txt" placeholder="Nombre" required="">
+				<input formControlName="correo" class="form-control" type="email" name="email" placeholder="Correo" required="">
+				<input formControlName="password" class="form-control" type="password" name="pswd" placeholder="Contraseña" required="">
+				<button>Crear</button>
+			</form>
+		</div>
 
 			<div class="login">
 				<form [formGroup]="form2" (ngSubmit)="Loggedin()">

@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ClientsComponent } from './components/clients/clients.component';
+import { ProductComponent } from './components/product/product.component';
 
 
 
@@ -23,7 +24,8 @@ import { ClientsComponent } from './components/clients/clients.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ClientsComponent
+    ClientsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

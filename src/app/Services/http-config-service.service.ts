@@ -20,12 +20,12 @@ export class HttpConfigServiceService {
 
 
 
-
-
-
    //CLIENTES
    private ApiUrlClient = 'api/Client/';
+    
 
+   //PRODUCTO
+   private ApiUrlProduct = 'api/Product/';
 
 
 
@@ -91,6 +91,44 @@ UpdateClient(id: number, Client: any): Observable <any>
 DeleteClient(id: number): Observable<any>
 {
    return this.http.delete(this.AppUrl + this.ApiUrlClient + id)
+}
+
+
+
+
+
+
+
+
+
+
+//PRODUCTO
+
+//Metodo para obtener los datos de la api
+GetListProduct(): Observable<any>
+{
+  return this.http.get(this.AppUrl + this.ApiUrlProduct);
+}
+
+
+//Metodo para guardar los datos 
+SaveProduct(Product: any): Observable<any>
+{
+   return this.http.post(this.AppUrl + this.ApiUrlProduct,Product)
+}
+
+
+//Metodo para actualizar los datos
+UpdateProduct(id: number, Product: any): Observable <any>
+{
+  return this.http.put(this.AppUrl + this.ApiUrlProduct + id,Product)
+}
+
+
+//Metodo para eliminar 
+DeleteProduct(id: number): Observable<any>
+{
+   return this.http.delete(this.AppUrl + this.ApiUrlProduct + id)
 }
 
 
