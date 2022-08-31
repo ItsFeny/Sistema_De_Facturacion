@@ -33,11 +33,11 @@
                            
                             <div class="input-group input-group-lg mt-4 mb-3">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-barcode" [class.green-color-icon]="this.forms.get('Codigo')?.valid" 
+                                    <i class="fa-solid fa-barcode"  [class.green-color-icon]="this.forms.get('Codigo')?.valid" 
                                                                     [class.red-color-icon]="this.forms.get('Codigo')?.invalid && this.forms.get('Codigo')?.touched">
                                     </i>
                                 </span>
-                                <input formControlName="Codigo" type="text" class="form-control" placeholder="Codigo" maxlength="20">
+                                <input formControlName="Codigo" type="text" class="form-control" placeholder="Codigo" maxlength="12">
                               </div>
 
 
@@ -49,7 +49,7 @@
     
                                     </i>
                                 </span>
-                                <input formControlName="Nombre" type="text" class="form-control" placeholder="Nombre" maxlength="13">
+                                <input formControlName="Nombre" type="text" class="form-control" placeholder="Nombre" maxlength="15">
                               </div>
 
 
@@ -62,7 +62,7 @@
     
                                     </i>
                                 </span>
-                                <input formControlName="Precio" type="text" class="form-control" placeholder="Precio" maxlength="12">
+                                <input formControlName="Precio" type="text" class="form-control" placeholder="Precio" maxlength="46">
                               </div>
     
 

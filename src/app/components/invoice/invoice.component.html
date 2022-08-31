@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+    
+    <div class="main">
+
+        <!--Back icono-->
+    <img src="../../../assets/img/Back.png" class="back" [routerLink]="['/Home']" title="Volver">
+    
+
+    <div class="action">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-secondary">
+            <i class="fa-solid fa-file"></i>&nbsp;   
+            Nueva
+        </button>
+
+        <button type="button" class="btn btn-secondary">
+            &nbsp;   
+            ...
+        </button>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nueva Factura</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--Componente-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+            Cerrar
+            </button>
+          <button type="button" class="btn btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Guardar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!--titulo-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8-offset-lg-2">
+               <div class="card bg-info">
+                   <div class="card-body text-center">
+                        <h2 style="font-size: 40px; font-weight: 700;">Facturacion:</h2>
+                   </div>
+               </div>
+            </div>
+        </div>
+     </div>
+
+    
+     <div class="data">
+        <table class="table caption-top" style="text-align: center;">
+            <thead >
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Sexo</th>
+              <th>Cargo</th>
+              <th>Telefono</th>
+              <th>Direccion</th>
+            </thead>
+            <tbody>
+             
+              
+          </table>
+     </div>
+
+     
+
+    </div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    </body>
+</html>

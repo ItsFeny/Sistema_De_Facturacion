@@ -1,0 +1,79 @@
+
+body 
+{
+    margin: 0;
+    padding: 18.7%;
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+.main
+{
+   position: relative;
+   bottom: 200px;
+}
+
+/* Cambio de cursor de los iconos en la lista de tarjetas */
+.icon-edit-elim
+{
+    cursor: pointer;
+}
+
+
+/* Color de la validaciones */
+.green-color-icon
+{
+    color: mediumseagreen;
+}
+
+.red-color-icon
+{
+    color: brown;
+}
+
+
+/*Configuracion icono back*/
+.back
+{
+    width: 3%;
+    height: 3%;
+    position: relative;
+    top: 40px;
+    left: 910px;
+    cursor: pointer;
+}
+
+
+/*botones y icono de back*/
+.action 
+{
+   display: flex;
+   position: absolute;
+   left: 0px;
+   top: 110%;   
+}
+
+.action button 
+{
+    margin-left: 10px;
+}
+
+
+
+/*datos*/
+
+.data
+{
+  position: relative;
+  top: 100px;
+  left: 5px;
+  text-align: center;
+}
+
+.data table
+{
+  color: aliceblue;
+  background-color: #27163d;
+}
+
