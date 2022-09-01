@@ -87,11 +87,21 @@
                         <h4>Lista De Productos</h4>
                         <table class="table mt-4">
                             <tbody>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Codigo</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>ITBIS</th>
+                                    <th>Subtotal</th>
+                                  </tr>
                                 <tr *ngFor="let Product of listProduct">
                                     <td> {{ Product.id }} </td>
                                     <td> {{ Product.codigo }} </td>
                                     <td> {{ Product.nombre}}  </td>
-                                    <td> {{ Product.precio }} </td>
+                                    <td> ${{ Product.precio }} </td>
+                                    <td> ${{ Product.itbis }} </td>
+                                    <td> ${{ Product.subtotal }} </td>
                                     <td class="icon-edit-elim">
                                         <i (click)="EditProduct(Product)" class="fa-solid fa-file-pen text-info" title="Editar"></i>
                                     </td>

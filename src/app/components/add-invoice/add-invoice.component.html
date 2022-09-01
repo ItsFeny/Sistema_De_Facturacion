@@ -1,0 +1,60 @@
+<div class="container">
+    <h2>Factura</h2>
+<br>
+    <form>
+       <div class="cliente">
+          <div class="title">
+              <h3>Cliente</h3>
+          </div>
+
+         <div class="data-form">
+          <p><strong>RNC:</strong><br><input type="text"></p>
+          <p><strong>NCF:</strong><br><input type="text"></p>
+          <p><strong>Nombre:</strong><br><input type="text" readonly></p>
+        </div>
+     </div>
+
+
+     <div class="invoice">
+        <div class="title">
+            <h3>Detalles</h3>
+        </div>
+
+       <div class="data-form">
+        <p><strong>Fecha:</strong><br><input type="text"></p>
+        <p><strong>Subtotal:</strong><br><input type="text" readonly></p>
+        <p><strong>Descuento:</strong><br><input type="text"></p>
+        <p><strong>Total:</strong><br><input type="text"></p>
+        <p><strong>Pago:</strong></p>
+        <select name="Pago">
+            <option>Credito</option>
+            <option>Contado</option>
+          </select>
+          <br><br>
+          <p><strong>Comprobante:</strong></p>
+          <select name="Comprobante">
+              <option>Crédito Fiscal</option>
+              <option>Consumidor Final</option>
+              <option>Tributación Especial</option>
+              <option>Gubernamental</option>
+            </select> 
+            <br><br>
+            <p><strong>Nota</strong></p><textarea name="Nota" rows="5" cols="57"></textarea> 
+      </div>
+   </div>
+  
+   <br><br>
+   <button type="button" class="btn btn-primary">
+    <i class="fa-solid fa-floppy-disk"></i>
+    Guardar
+  </button>
+<div class="close">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+       Cerrar
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+</div>
+
+    </form>
+
+</div>

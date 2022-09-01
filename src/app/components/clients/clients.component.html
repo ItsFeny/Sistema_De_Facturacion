@@ -87,6 +87,12 @@
                         <h4>Lista De Clientes</h4>
                         <table class="table mt-4">
                             <tbody>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Cedula</th>
+                                    <th>Telefono</th>
+                                  </tr>
                                 <tr *ngFor="let client of listClient">
                                     <td> {{ client.id }} </td>
                                     <td> {{ client.name }} </td>

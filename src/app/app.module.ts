@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ProductComponent } from './components/product/product.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
+import { AddInvoiceComponent } from './components/add-invoice/add-invoice.component';
 
 
 
@@ -27,7 +28,8 @@ import { InvoiceComponent } from './components/invoice/invoice.component';
     HomeComponent,
     ClientsComponent,
     ProductComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    AddInvoiceComponent
   ],
   imports: [
     BrowserModule,

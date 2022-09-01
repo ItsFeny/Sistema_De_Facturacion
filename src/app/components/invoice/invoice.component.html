@@ -20,11 +20,6 @@
             <i class="fa-solid fa-file"></i>&nbsp;   
             Nueva
         </button>
-
-        <button type="button" class="btn btn-secondary">
-            &nbsp;   
-            ...
-        </button>
     </div>
 
   
@@ -37,17 +32,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!--Componente-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            <i class="fa-solid fa-xmark"></i>
-            Cerrar
-            </button>
-          <button type="button" class="btn btn-primary">
-            <i class="fa-solid fa-floppy-disk"></i>
-            Guardar
-          </button>
+           <app-add-invoice></app-add-invoice>
         </div>
       </div>
     </div>
@@ -60,7 +45,7 @@
             <div class="col-lg-8-offset-lg-2">
                <div class="card bg-info">
                    <div class="card-body text-center">
-                        <h2 style="font-size: 40px; font-weight: 700;">Facturacion:</h2>
+                        <h2 style="font-size: 40px; font-weight: 700;">Consulta De Facturas:</h2>
                    </div>
                </div>
             </div>
@@ -68,21 +53,34 @@
      </div>
 
     
-     <div class="data">
-        <table class="table caption-top" style="text-align: center;">
-            <thead >
-              <th>Id</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Sexo</th>
-              <th>Cargo</th>
-              <th>Telefono</th>
-              <th>Direccion</th>
-            </thead>
-            <tbody>
-             
-              
-          </table>
+     <!--Datos-->
+    <div class="data">
+      <table class="table mt-1">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <th>RNC</th>
+                <th>Fecha</th>
+                <th>Comprobante</th>
+                <th>Total</th>
+              </tr>
+              <!--
+            <tr *ngFor="let Product of listProduct">
+                <td> {{ Product.id }} </td>
+                <td> {{ Product.codigo }} </td>
+                <td> {{ Product.nombre}}  </td>
+                <td> ${{ Product.precio }} </td>
+                <td> ${{ Product.itbis }} </td>
+                <td> ${{ Product.subtotal }} </td>
+                <td class="icon-edit-elim">
+                    <i class="fa-solid fa-file-pen text-info" title="Editar"></i>
+                </td>
+            </tr>
+            -->
+        </tbody>
+    </table>
+
+
      </div>
 
      
