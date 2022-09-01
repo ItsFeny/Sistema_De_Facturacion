@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   form2: FormGroup;
 
+  //Variable de pantalla de carga
+  loading = false;
+
   constructor(private fb: FormBuilder, 
               private _httpConfig: HttpConfigServiceService, 
               private router: Router,
@@ -78,7 +81,7 @@ export class LoginComponent implements OnInit {
     this._httpConfig.Login(users).subscribe(({token}) => {
       console.log("Logeado");
       sessionStorage.setItem('token', token)
-      this.router.navigate(["/Home"]);
+      this.screenLoading();
       this.form2.reset();
       
     }, (error) => {
@@ -87,5 +90,17 @@ export class LoginComponent implements OnInit {
   }
 
 
+    //Pantalla de carga
+    screenLoading()
+    {
+      this.loading = true;
+      setTimeout(() =>
+      {
+        this.loading = false;
+        this.router.navigate(["/Home"]);
+
+      }, 1500);
+    }
+ 
 
 }
