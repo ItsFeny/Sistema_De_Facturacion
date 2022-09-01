@@ -27,7 +27,9 @@ export class HttpConfigServiceService {
    //PRODUCTO
    private ApiUrlProduct = 'api/Product/';
 
-
+   
+   //FACTURAS
+   private ApiUrlInvoice = 'api/Invoice/';
 
 
 
@@ -129,6 +131,40 @@ UpdateProduct(id: number, Product: any): Observable <any>
 DeleteProduct(id: number): Observable<any>
 {
    return this.http.delete(this.AppUrl + this.ApiUrlProduct + id)
+}
+
+
+
+
+
+
+//Facturas
+
+//Metodo para obtener los datos de la api
+GetListInvoice(): Observable<any>
+{
+  return this.http.get(this.AppUrl + this.ApiUrlInvoice);
+}
+
+
+//Metodo para guardar los datos 
+SaveInvoice(Invoice: any): Observable<any>
+{
+   return this.http.post(this.AppUrl + this.ApiUrlInvoice,Invoice)
+}
+
+
+//Metodo para actualizar los datos
+UpdateInvoice(id: number, Invoice: any): Observable <any>
+{
+  return this.http.put(this.AppUrl + this.ApiUrlInvoice + id,Invoice)
+}
+
+
+//Metodo para eliminar 
+DeleteInvoice(id: number): Observable<any>
+{
+   return this.http.delete(this.AppUrl + this.ApiUrlInvoice + id)
 }
 
 

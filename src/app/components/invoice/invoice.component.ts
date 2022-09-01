@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpConfigServiceService } from 'src/app/Services/http-config-service.service';
 
 @Component({
   selector: 'app-invoice',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent implements OnInit {
 
-  constructor() { }
+  listInvoice:any [] = [];
 
-  ngOnInit(): void {
+  constructor(private HttpConfigServiceService: HttpConfigServiceService)
+   { }
+
+  ngOnInit(): void 
+  {
+     this.GetInvoice();
   }
+
+
+  GetInvoice()
+  {
+      this.HttpConfigServiceService.GetListInvoice().subscribe(data =>{
+        console.log(data);
+        this.listInvoice = data;
+      }, error =>{
+        console.log(error);
+      })
+  }
+  
 
 }

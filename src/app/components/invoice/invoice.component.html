@@ -64,19 +64,22 @@
                 <th>Comprobante</th>
                 <th>Total</th>
               </tr>
-              <!--
-            <tr *ngFor="let Product of listProduct">
-                <td> {{ Product.id }} </td>
-                <td> {{ Product.codigo }} </td>
-                <td> {{ Product.nombre}}  </td>
-                <td> ${{ Product.precio }} </td>
-                <td> ${{ Product.itbis }} </td>
-                <td> ${{ Product.subtotal }} </td>
+        
+            <tr *ngFor="let Invoice of listInvoice" style="background-color: rgb(54, 51, 59);">
+                <td> {{ Invoice.id }} </td>
+                <td> {{ Invoice.rnc }} </td>
+                <td> {{ Invoice.fecha}}  </td>
+                <td> ${{ Invoice.comprobante }} </td>
+                <td> ${{ Invoice.total }} </td>
                 <td class="icon-edit-elim">
-                    <i class="fa-solid fa-file-pen text-info" title="Editar"></i>
+                    <i class="fa-solid fa-eye text-info" title="Ver"></i>
                 </td>
+                <td class="icon-edit-elim">
+                  <i class="fa-solid fa-trash-can text-danger" title="Eliminar"></i>
+              </td>
+                
             </tr>
-            -->
+
         </tbody>
     </table>
 
