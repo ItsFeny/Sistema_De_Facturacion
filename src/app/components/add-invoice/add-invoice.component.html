@@ -1,16 +1,16 @@
 <div class="container">
     <h2>Factura</h2>
 <br>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="AddInvoice()">
        <div class="cliente">
           <div class="title">
               <h3>Cliente</h3>
           </div>
 
          <div class="data-form">
-          <p><strong>RNC:</strong><br><input type="text"></p>
-          <p><strong>NCF:</strong><br><input type="text"></p>
-          <p><strong>Nombre:</strong><br><input type="text" readonly></p>
+          <p><strong>RNC:</strong><br><input type="text" formControlName="rnc" (keypress)="onKeypressEvent($event)" maxlength="11"></p>
+          <p><strong>NCF:</strong><br><input type="text" formControlName="ncf" value="{{listclientcedula[0].ncf}}" readonly></p>
+          <p><strong>Nombre:</strong><br><input type="text" formControlName="name" value="{{listclientcedula[0].name}}" readonly></p>
         </div>
      </div>
 
@@ -21,30 +21,32 @@
         </div>
 
        <div class="data-form">
-        <p><strong>Fecha:</strong><br><input type="text"></p>
-        <p><strong>Subtotal:</strong><br><input type="text" readonly></p>
-        <p><strong>Descuento:</strong><br><input type="text"></p>
-        <p><strong>Total:</strong><br><input type="text"></p>
+        <p><strong>Fecha:</strong><br><input type="date" formControlName="fecha"></p>
+        <p><strong>Subtotal:</strong><br><input type="text" formControlName="subtotal"></p>
+        <p><strong>Descuento:</strong><br><input type="number" formControlName="descuento"></p>
+        <p><strong>Total:</strong><br><input type="number" formControlName="total"></p>
         <p><strong>Pago:</strong></p>
-        <select name="Pago">
+        <select name="pago" formControlName="pago">
             <option>Credito</option>
             <option>Contado</option>
           </select>
           <br><br>
           <p><strong>Comprobante:</strong></p>
-          <select name="Comprobante">
+          <select name="comprobante" formControlName="comprobante">
               <option>Crédito Fiscal</option>
               <option>Consumidor Final</option>
               <option>Tributación Especial</option>
               <option>Gubernamental</option>
             </select> 
             <br><br>
-            <p><strong>Nota</strong></p><textarea name="Nota" rows="5" cols="57"></textarea> 
+            <p><strong>Nota</strong></p>
+            <textarea name="Nota" rows="5" cols="57" formControlName="nota">
+            </textarea> 
       </div>
    </div>
   
    <br><br>
-   <button type="button" class="btn btn-primary">
+   <button type="submit" class="btn btn-primary">
     <i class="fa-solid fa-floppy-disk"></i>
     Guardar
   </button>
@@ -54,7 +56,6 @@
       <i class="fa-solid fa-xmark"></i>
     </button>
 </div>
-
-    </form>
+</form>
 
 </div>

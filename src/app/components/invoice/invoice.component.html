@@ -32,7 +32,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-           <app-add-invoice></app-add-invoice>
+           <app-add-invoice #ClientsComponent></app-add-invoice> 
         </div>
       </div>
     </div>
@@ -69,13 +69,16 @@
                 <td> {{ Invoice.id }} </td>
                 <td> {{ Invoice.rnc }} </td>
                 <td> {{ Invoice.fecha}}  </td>
-                <td> ${{ Invoice.comprobante }} </td>
+                <td> {{ Invoice.comprobante }} </td>
                 <td> ${{ Invoice.total }} </td>
                 <td class="icon-edit-elim">
-                    <i class="fa-solid fa-eye text-info" title="Ver"></i>
-                </td>
+                    <i class="fa-solid fa-eye text-info" title="Ver"                        
+                                                         [routerLink]="['/Details']"
+                                                         (click)=" ShowInvoice(Invoice)"></i>
+                </td>                                    
                 <td class="icon-edit-elim">
-                  <i class="fa-solid fa-trash-can text-danger" title="Eliminar"></i>
+                  <i class="fa-solid fa-trash-can text-danger" title="Eliminar"
+                 (click)=" DeleteInvoice(Invoice.id)"></i>
               </td>
                 
             </tr>
@@ -91,7 +94,7 @@
     </div>
 
 
-<script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+         <script src="js/jquery-1.11.1.min.js"></script>
+       <script src="js/bootstrap.js"></script>
     </body>
 </html>

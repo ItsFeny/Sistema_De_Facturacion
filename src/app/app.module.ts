@@ -19,6 +19,7 @@ import { ProductComponent } from './components/product/product.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { AddInvoiceComponent } from './components/add-invoice/add-invoice.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { InvoiceDetailsComponent } from './components/invoice-details/invoice-details.component';
 
 
 
@@ -31,7 +32,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     ProductComponent,
     InvoiceComponent,
     AddInvoiceComponent,
-    LoadingComponent
+    LoadingComponent,
+    InvoiceDetailsComponent
   ],
   imports: [
     BrowserModule,

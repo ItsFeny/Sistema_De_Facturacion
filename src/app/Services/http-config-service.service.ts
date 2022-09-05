@@ -71,8 +71,15 @@ Login(users: any): Observable<any>
 //Metodo para obtener los datos de la api
 GetListClient(): Observable<any>
 {
-  return this.http.get(this.AppUrl + this.ApiUrlClient);
+   return this.http.get(this.AppUrl + this.ApiUrlClient);
 }
+
+
+GetClientRnc(Cedula: string): Observable<any>
+{ 
+   return this.http.get(this.AppUrl + this.ApiUrlClient + Cedula);
+}
+
 
 
 //Metodo para guardar los datos 

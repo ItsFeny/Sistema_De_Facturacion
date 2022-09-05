@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpConfigServiceService } from 'src/app/Services/http-config-service.service';
 import { Title } from '@angular/platform-browser';
+import { AddInvoiceComponent } from '../add-invoice/add-invoice.component';
 
 @Component({
   selector: 'app-clients',
@@ -10,6 +11,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class ClientsComponent implements OnInit {
 
+
+  
   
   //arreglo para crear las listas de las tarjetas de credito eh interpolarlo en el tr
   listClient: any[] = [];
@@ -20,11 +23,15 @@ export class ClientsComponent implements OnInit {
   //identificador de si esta editando o no mediante el valor 0 y 1
   id: number | undefined;
 
+  listclientcedula: any[] = [];
+
+
 
 
   //agregar como un id a los campos mediante las variables con form group 
   //nota se importa un modulo llamado reactiveform para que funcione
   forms: FormGroup;
+
   constructor(private fb: FormBuilder,
               private HttpConfigServiceService: HttpConfigServiceService,
               private titulo: Title) 
@@ -32,7 +39,8 @@ export class ClientsComponent implements OnInit {
     this.forms = this.fb.group({
       Name:['', Validators.required],
       Cedula:['', [Validators.required]], 
-      Telefono:['', [Validators.required]]
+      Telefono:['', [Validators.required]],
+      Ncf:['', [Validators.required]]
     });
 
     titulo.setTitle('Clientes');
@@ -42,7 +50,6 @@ export class ClientsComponent implements OnInit {
   ngOnInit(): void 
   {
     this.GetClient();
-    
   }
 
 
@@ -70,7 +77,8 @@ export class ClientsComponent implements OnInit {
     {
       Name: this.forms.get('Name')?.value,
       Cedula: this.forms.get('Cedula')?.value,
-      Telefono: this.forms.get('Telefono')?.value
+      Telefono: this.forms.get('Telefono')?.value,
+      Ncf: this.forms.get('Ncf')?.value
     }
     
 
@@ -134,8 +142,11 @@ export class ClientsComponent implements OnInit {
    this.forms.patchValue({
      Name: client.name,
      Cedula: client.cedula,
-     Telefono: client.telefono
-   })}
+     Telefono: client.telefono,
+     Ncf: client.ncf
+   })
+  
+  }
 
 
 }

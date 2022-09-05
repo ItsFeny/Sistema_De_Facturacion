@@ -49,9 +49,9 @@ body
 .action 
 {
    display: flex;
-   position: absolute;
+   position: relative;
    left: 0px;
-   top: 48%;   
+   top: 200px;   
 }
 
 .action button 

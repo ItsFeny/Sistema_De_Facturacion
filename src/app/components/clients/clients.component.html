@@ -43,7 +43,7 @@
 
                               <div class="input-group input-group-lg mt-4 mb-3">
                                 <span class="input-group-text">
-                                    <i class="fa-solid fa-credit-card" [class.green-color-icon]="this.forms.get('Cedula')?.valid"
+                                    <i class="fa-sharp fa-solid fa-id-card" [class.green-color-icon]="this.forms.get('Cedula')?.valid"
                                                                        [class.red-color-icon]="this.forms.get('Cedula')?.invalid && this.forms.get('Cedula')?.touched"
                                                                        >
     
@@ -51,6 +51,20 @@
                                 </span>
                                 <input formControlName="Cedula" type="text" class="form-control" placeholder="Cedula" maxlength="13">
                               </div>
+
+
+
+                              <div class="input-group input-group-lg mt-4 mb-3">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-hashtag"     [class.green-color-icon]="this.forms.get('Ncf')?.valid"
+                                                                       [class.red-color-icon]="this.forms.get('Ncf')?.invalid && this.forms.get('Ncf')?.touched"
+                                                                       >
+    
+                                    </i>
+                                </span>
+                                <input formControlName="Ncf" type="text" class="form-control" placeholder="NCF" maxlength="11">
+                              </div>
+
 
 
 
@@ -91,12 +105,14 @@
                                     <th>Id</th>
                                     <th>Nombre</th>
                                     <th>Cedula</th>
+                                    <th>NCF</th>
                                     <th>Telefono</th>
                                   </tr>
                                 <tr *ngFor="let client of listClient">
                                     <td> {{ client.id }} </td>
                                     <td> {{ client.name }} </td>
                                     <td> {{ client.cedula}}  </td>
+                                    <td> {{ client.ncf }} </td>
                                     <td> {{ client.telefono }} </td>
                                     <td class="icon-edit-elim">
                                         <i (click)="EditClient(client)" class="fa-solid fa-file-pen text-info" title="Editar"></i>
